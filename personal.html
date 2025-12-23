@@ -1,0 +1,40 @@
+<!-- homepage -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> James Irwin Website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- load sidebar dynamically -->
+<script>
+fetch("sidebar.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+  });
+</script>
+
+<body>
+    <div class="layout">
+        <div id="sidebar"></div>
+
+        <div class="vertical-line"></div>
+
+        <div class="text">
+            <p> <b> about me </b> </p>
+            <p>
+                hello! my name is james and i am a fourth-year computer science major <br>
+                at cal poly, san luis obispo with minors in data science and philosophy. <br>
+                next year, i will be continuing at poly to pursue my masters in computer <br>
+                science. my advisor will be <a href="https://www.brinckerhoff.org/" target="_blank"> dr. john clements</a> and my proposed thesis <br>
+                is involves the design and impact of digital interfaces for music creation. <br>
+                my areas of study include computer science, computer music, and data science.
+            </p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
