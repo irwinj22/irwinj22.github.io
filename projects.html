@@ -1,0 +1,31 @@
+<!-- projects -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> James Irwin Website </title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- load sidebar dynamically -->
+<script>
+fetch("sidebar.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+  });
+</script>
+
+<body>
+    <div class="layout">
+        <div id="sidebar"></div>
+
+        <div class="vertical-line"></div>
+
+        <div>
+            <p> <b> selected personal and school projects </b></p>
+            <p> project 1 ...</p>
+        </div>
+    </div>
+</body>
