@@ -55,3 +55,11 @@ img.apple {
     height: 100%;
 }
 
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    color: navy;
+}
