@@ -4,28 +4,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> James Irwin Personal Website </title>
+    <title> James Irwin Website </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!-- load sidebar dynamically -->
+<script>
+fetch("sidebar.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+  });
+</script>
+
 <body>
     <div class="layout">
-        <div class="text">
-            <h1>James Irwin</h1>
-            <p> m.s. in computer science </p>
-            <p> cal poly, san luis obispo </p>
-            <p> jirwin06 (at) calpoly (dot) edu </p>
-            
-            <br> <br>
-
-            <div class="nav">
-                <p><a href ="index.html"><b>home</b></a></p>
-                <p><a href ="projects/projects.html"><b>projects</b></a></p>
-                <p><b>music</b></p>
-                <p><b>resume</b></p>
-                <p><b>personal</b></p>
-            </div>
-        </div>
+        <div id="sidebar"></div>
 
         <div class="vertical-line"></div>
 
