@@ -19,6 +19,7 @@ body {
 .text p {
     margin-top: 0px;
     margin-bottom: 8px;
+    word-spacing: 2px;
 }
 
 .text h1 {
@@ -27,7 +28,9 @@ body {
 }
 
 .vertical-line {
-    width: 2px;
+    width: 1px;
+    min-width: 1px;
+    max-width: 1px;
     height: 360px;
     background-color: black;
     margin-left: 5px;
