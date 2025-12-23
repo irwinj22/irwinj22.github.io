@@ -14,6 +14,18 @@ fetch("sidebar.html")
   .then(response => response.text())
   .then(html => {
     document.getElementById("sidebar").innerHTML = html;
+
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
+    const links = sidebar.querySelectorAll(".nav a");
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
   });
 </script>
 
@@ -24,7 +36,9 @@ fetch("sidebar.html")
         <div class="vertical-line"></div>
 
         <div class="text">
-            <p> <b> about me </b> </p>
+            <div class="title-text">
+                <p> <b> about me </b> </p>
+            </div>
             <p>
                 hello! my name is james and i am a fourth-year computer science major <br>
                 at cal poly, san luis obispo, with minors in data science and philosophy. <br>

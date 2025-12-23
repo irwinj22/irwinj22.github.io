@@ -12,7 +12,7 @@ body {
 .text {
     flex: 1;
     min-width: 240px;
-    margin-top: 0px;
+    margin-top: 40px;
     margin-bottom: 8px;
 }
 
@@ -25,6 +25,10 @@ body {
 .text h1 {
     margin-top: 0px;
     margin-bottom: 8px;
+}
+
+.title-text {
+    color: rgb(28, 28, 136);
 }
 
 .vertical-line {
@@ -64,5 +68,9 @@ img.apple {
 }
 
 .nav a:hover {
-    color: navy;
+    color: rgb(144, 144, 150);
+}
+
+.nav a.active {
+    color: rgb(144, 144, 150);
 }
