@@ -36,10 +36,10 @@ body {
     width: 1px;
     min-width: 1px;
     max-width: 1px;
-    height: 720px;
+    align-self: stretch;
     background-color: black;
-    margin-left: 5px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 25px;
 }
 
 .date-text {
