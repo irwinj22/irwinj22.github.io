@@ -96,3 +96,12 @@ img.apple {
 .nav a.active {
     color: rgb(144, 144, 150);
 }
+
+a {
+    text-decoration: none;
+    color: rgb(28, 28, 136);
+}
+
+a:hover {
+    text-decoration: underline;
+}
