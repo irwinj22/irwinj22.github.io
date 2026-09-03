@@ -1,0 +1,65 @@
+<!-- projects -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> James Irwin Website </title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- load sidebar dynamically -->
+<script>
+fetch("sidebar.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
+    const links = sidebar.querySelectorAll(".nav a");
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+<body>
+    <div class="layout">
+        <div id="sidebar"></div>
+
+        <div class="vertical-line"></div>
+
+        <div class="text">
+            <div class="title-text">
+                    <p> <b> education </b></p>
+            </div>
+            
+            <br>
+            
+            <p style="font-size: 20px; margin-bottom: 9px;"> <b> california polytechnic state university, san luis obispo</b> </p>
+
+            <div class="subtitle-text">
+              <p> <b>m.s. in computer science</b> </p>
+            </div>  
+            <p style="margin-bottom: 9px;"> <i> expected may 2027 </i> </p>
+            <p style="margin-bottom: 5px;"> gpa: 4.0/4.0 </p>
+            <p style="margin-bottom: 5px;"> thesis: <i> understanding the design and impact of digital interfaces for music creation</i> </p>
+            <p style="margin-bottom: 5px;"> advisor: <a href="https://www.brinckerhoff.org/" target="_blank"> dr. john clements</a> </p>
+
+            <br>
+
+            <div class="subtitle-text">
+              <p> <b>b.s. in computer science</b> </p>
+            </div>  
+            <p style="margin-bottom: 9px;"> <i> graduated june 2026 </i> </p>
+            <p style="margin-bottom: 5px;"> gpa: 3.8/4.0 </p>
+            <p style="margin-bottom: 5px;"> minors in data science and philosophy/i> </p>
+            <p style="margin-bottom: 5px;"> cal poly merit scholar </p>
+    </div>
+</body>

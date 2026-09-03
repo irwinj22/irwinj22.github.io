@@ -30,6 +30,20 @@ body {
 
 .title-text {
     color: rgb(28, 28, 136);
+    font-size: 22px;
+}
+
+.subtitle-text {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.subtitle-text a {
+    color: black;
+}
+
+.subtitle-text a:hover {
+    color: black;
 }
 
 .vertical-line {
